@@ -1,0 +1,31 @@
+<!-- workout.component.html -->
+<div class="retro-container mt-4">
+    <button class="retro-exit-button" (click)="goBack()">
+      <i class="fas fa-door-open"></i> Exit to Menu
+    </button>
+    <div class="retro-window">
+      <div class="retro-title-bar">
+        <span>{{ currentExercise?.name }}</span>
+      </div>
+      <div class="retro-content">
+        <p>{{ currentExercise?.description }}</p>
+        <ul class="retro-list">
+          <li *ngFor="let rep of currentExercise?.sets; let i = index">
+            Set {{ i + 1 }}: {{ rep }} reps
+          </li>
+        </ul>
+        <div class="retro-buttons">
+          <button class="workout-button-icon" (click)="previousExercise()" [disabled]="currentExerciseIndex === 0">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button *ngIf="!isLastExercise()" class="workout-button-icon" (click)="nextExercise()">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <button *ngIf="isLastExercise()" class="workout-button-icon" (click)="finishWorkout()">
+            <i class="fas fa-flag-checkered"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

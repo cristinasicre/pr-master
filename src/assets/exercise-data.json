@@ -1,0 +1,172 @@
+[
+  {
+    "day": "Day 1",
+    "exercises": [
+      {
+        "name": "Standing Calf Raise",
+        "sets": [12, 12, 10, 10],
+        "description": "A great exercise to strengthen your calves by lifting your heels to engage your calf muscles."
+      },
+      {
+        "name": "Machine Abductions",
+        "sets": [15, 15, 12],
+        "description": "Targets the abductor muscles in your hips, helping to improve hip stability and strength."
+      },
+      {
+        "name": "Lying/Seated Leg Curl",
+        "sets": [10, 10, 8, 8],
+        "description": "Focuses on your hamstrings, helping to build strength and muscle mass in the back of your legs."
+      },
+      {
+        "name": "Smith Machine Squat",
+        "sets": [8, 8, 6, 6],
+        "description": "A compound exercise that targets the quadriceps, hamstrings, and glutes using a guided barbell."
+      },
+      {
+        "name": "Machine Hip Thrust",
+        "sets": [12, 12, 10, 10],
+        "description": "Isolates the glute muscles, helping to increase hip extension strength and power."
+      },
+      {
+        "name": "Glute Bulgarian Split Squat",
+        "sets": [10, 10, 8],
+        "description": "An advanced single-leg exercise that targets the glutes, quads, and hamstrings for balanced lower-body strength."
+      },
+      {
+        "name": "B-Stance Deadlift",
+        "sets": [8, 8, 6],
+        "description": "A variation of the deadlift focusing on unilateral strength and stability in the hamstrings and glutes."
+      }
+    ]
+  },
+  {
+    "day": "Day 2",
+    "exercises": [
+      {
+        "name": "Preacher Curl",
+        "sets": [10, 10, 8, 8],
+        "description": "Isolates the biceps to ensure maximum contraction and growth during curls."
+      },
+      {
+        "name": "Military Press",
+        "sets": [8, 8, 6, 6],
+        "description": "A shoulder press exercise that targets the deltoids and triceps, performed while standing or sitting."
+      },
+      {
+        "name": "Incline Lateral Raise",
+        "sets": [12, 12, 10],
+        "description": "Targets the lateral deltoids, enhancing shoulder width and definition."
+      },
+      {
+        "name": "Single Arm Dumbbell Row",
+        "sets": [10, 10, 8, 8],
+        "description": "Focuses on the upper back muscles and lats, promoting unilateral strength and muscle balance."
+      },
+      {
+        "name": "Close-Grip Push-Ups",
+        "sets": [15, 15, 12],
+        "description": "Emphasizes the triceps and inner chest, increasing upper-body strength."
+      },
+      {
+        "name": "Gironda Row",
+        "sets": [10, 10, 8, 8],
+        "description": "A variation of the bent-over row that targets the middle back, lats, and traps."
+      },
+      {
+        "name": "Cable Triceps Extension",
+        "sets": [12, 12, 10, 10],
+        "description": "Isolates the triceps for improved muscle growth and definition."
+      },
+      {
+        "name": "Bayesian Curl on Cable",
+        "sets": [10, 10, 8],
+        "description": "Targets the biceps with constant tension, promoting peak contraction and muscle growth."
+      }
+    ]
+  },
+  {
+    "day": "Day 3",
+    "exercises": [
+      {
+        "name": "Glute Bridge",
+        "sets": [12, 12, 10, 10],
+        "description": "Primarily targets the glutes and hamstrings, improving hip extension and lower back strength."
+      },
+      {
+        "name": "Romanian Deadlift",
+        "sets": [10, 10, 8, 8],
+        "description": "A hamstring-dominant exercise that also works the glutes and lower back."
+      },
+      {
+        "name": "Lying/Seated Leg Curl",
+        "sets": [10, 10, 8, 8],
+        "description": "Focuses on your hamstrings, helping to build strength and muscle mass in the back of your legs."
+      },
+      {
+        "name": "Unilateral Pendulum Press",
+        "sets": [8, 8, 6, 6],
+        "description": "Targets the chest and shoulders, emphasizing unilateral strength and stability."
+      },
+      {
+        "name": "Leg Extension",
+        "sets": [15, 15, 12, 12],
+        "description": "Isolates the quadriceps, helping to build muscle definition and strength."
+      },
+      {
+        "name": "Hyperextension on Bench",
+        "sets": [12, 12, 10],
+        "description": "Targets the lower back, glutes, and hamstrings, improving posterior chain strength."
+      },
+      {
+        "name": "EZ Bar French Press",
+        "sets": [10, 10, 8, 8],
+        "description": "A triceps extension exercise that targets the long head of the triceps for better arm definition."
+      },
+      {
+        "name": "Hammer Curl",
+        "sets": [12, 12, 10],
+        "description": "Targets the brachialis and forearms, promoting overall arm strength and muscle growth."
+      }
+    ]
+  },
+ {
+    "day": "Day 4",
+    "exercises": [
+      {
+        "name": "Machine Rear Delt Fly",
+        "sets": [12, 12, 10, 10],
+        "description": "Focuses on the rear deltoids, helping to improve shoulder stability and posture."
+      },
+      {
+        "name": "Neutral Grip Lat Pulldown",
+        "sets": [10, 10, 8, 8],
+        "description": "Targets the lats and upper back, promoting a V-shaped torso and back strength."
+      },
+      {
+        "name": "Chest-Supported Lateral Raise",
+        "sets": [12, 12, 10],
+        "description": "Isolates the lateral deltoids, enhancing shoulder width and overall shoulder development."
+      },
+      {
+        "name": "T-Bar Row",
+        "sets": [10, 10, 8, 8],
+        "description": "Targets the mid-back, lats, and traps, improving back thickness and strength."
+      },
+      {
+        "name": "Incline Dumbbell Press",
+        "sets": [8, 8, 6, 6],
+        "description": "Targets the upper chest and shoulders, promoting upper body strength and muscle balance."
+      },
+      {
+        "name": "Cable Rear Delt Lateral Raise",
+        "sets": [12, 12, 10],
+        "description": "Isolates the rear deltoids, helping to improve shoulder stability and posture."
+      },
+      {
+        "name": "Low Row Machine",
+        "sets": [10, 10, 8, 8],
+        "description": "Focuses on the lower lats and mid-back, enhancing back thickness and overall strength."
+      }
+    ]
+  }
+]
