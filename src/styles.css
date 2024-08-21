@@ -14,19 +14,19 @@ body {
 }
 
 .retro-play-button {
-  background-color: #6a0dad;
+  background-color: #ff6347;
   color: #fff;
   border: 4px solid #ff66ff;
   border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 15px 30px;
+  font-size: 1.5rem;
   cursor: pointer;
-  margin-bottom: 10px;
   box-shadow: 5px 5px 0px #ff66ff;
   font-family: "Press Start 2P", cursive;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 10px;
 }
 
 .retro-play-button i {
@@ -39,7 +39,6 @@ body {
   border-color: #6a0dad;
   box-shadow: 5px 5px 0px #6a0dad;
 }
-
 .workout-button {
   background-color: #6a0dad;
   color: #fff;
@@ -96,7 +95,6 @@ body {
   max-width: 400px;
   box-shadow: 5px 5px 0px #ff66ff;
 }
-
 .retro-title-bar {
   background-color: #6a0dad;
   color: #fff;
@@ -104,8 +102,11 @@ body {
   text-align: center;
   font-size: 1.2rem;
   border-bottom: 4px solid #ff66ff;
+  position: relative; /* Asegura que el botón se posicione correctamente */
 }
-
+.retro-title-bar span {
+  display: inline-block;
+}
 .retro-content {
   padding: 20px;
 }
@@ -129,9 +130,7 @@ body {
   cursor: pointer;
   margin: 4px;
   flex: 1 0 calc(33.333% - 8px); /* Asegura que tres botones encajen en una fila */
-  max-width: calc(
-    23% - 8px
-  );
+  max-width: calc(23% - 8px);
   box-sizing: border-box;
   text-align: center;
 }
@@ -207,3 +206,10 @@ body {
   align-items: center;
   width: 100%;
 }
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
