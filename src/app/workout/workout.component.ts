@@ -20,19 +20,28 @@ export class WorkoutComponent implements OnInit {
       this.currentDayIndex = +params.get('dayIndex')!;
     });
 
-    this.http.get<ExerciseDay[]>('assets/exercise-data.json').subscribe(data => {
+    this.loadExerciseData();
+  }
+
+  loadExerciseData() {
+    this.http.get<ExerciseDay[]>('http://localhost:3000/exerciseDays').subscribe(data => {
       this.exerciseDays = data;
       this.currentExerciseIndex = 0;
     });
   }
 
   get currentExercise(): Exercise | undefined {
-    return this.exerciseDays[this.currentDayIndex]?.exercises[this.currentExerciseIndex];
+    if (this.exerciseDays.length > 0 && this.exerciseDays[this.currentDayIndex]) {
+      return this.exerciseDays[this.currentDayIndex].exercises[this.currentExerciseIndex];
+    }
+    return undefined;
   }
 
   nextExercise() {
     if (this.currentExerciseIndex < this.exerciseDays[this.currentDayIndex].exercises.length - 1) {
       this.currentExerciseIndex++;
+    } else {
+      this.router.navigate(['/train-plan']);
     }
   }
 
@@ -43,7 +52,11 @@ export class WorkoutComponent implements OnInit {
   }
 
   isLastExercise(): boolean {
-    return this.currentExerciseIndex === this.exerciseDays[this.currentDayIndex].exercises.length - 1;
+    return (
+      this.exerciseDays.length > 0 &&
+      this.currentDayIndex < this.exerciseDays.length &&
+      this.currentExerciseIndex === this.exerciseDays[this.currentDayIndex].exercises.length - 1
+    );
   }
 
   finishWorkout() {

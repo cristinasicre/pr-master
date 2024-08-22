@@ -1,0 +1,37 @@
+<!-- add-exercise.component.html -->
+<div class="retro-container mt-4">
+  <div class="retro-window">
+    <div class="retro-title-bar">
+      <span>Add New Exercise</span>
+    </div>
+    <div class="retro-content">
+      <form>
+        <!-- Campos de formulario -->
+        <div class="form-group">
+          <label for="exerciseName">Exercise Name</label>
+          <input type="text" id="exerciseName" class="form-control" [(ngModel)]="exerciseName" name="exerciseName" placeholder="Enter exercise name">
+        </div>
+        <div class="form-group">
+          <label for="exerciseSets">Sets and Reps</label>
+          <input type="text" id="exerciseSets" class="form-control" [(ngModel)]="exerciseSets" name="exerciseSets" placeholder="e.g., 1x8-10+20”RP+AMRAP, 2x12">
+        </div>
+        <div class="form-group">
+          <label for="exerciseDescription">Description</label>
+          <textarea id="exerciseDescription" class="form-control" [(ngModel)]="exerciseDescription" name="exerciseDescription" rows="3" placeholder="Enter exercise description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="exerciseRIR">RIR</label>
+          <input type="text" id="exerciseRIR" class="form-control" [(ngModel)]="exerciseRIR" name="exerciseRIR" placeholder="Enter RIR (e.g., 1-2)">
+        </div>
+        <div class="form-group">
+          <label for="exerciseLink">External Link</label>
+          <input type="text" id="exerciseLink" class="form-control" [(ngModel)]="exerciseLink" name="exerciseLink" placeholder="Enter external link">
+        </div>
+        <div class="retro-buttons">
+          <button type="button" class="retro-cancel-button" (click)="cancel()">Cancel</button>
+          <button type="button" class="retro-save-button" (click)="saveExercise()">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -16,12 +16,16 @@ export class TrainPlanComponent {
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
-    this.http.get<ExerciseDay[]>('assets/exercise-data.json').subscribe(data => {
-      this.exerciseDays = data;
-      this.chunkedDays = this.chunkArray(this.exerciseDays, 6);
-    });
+    this.loadExerciseData();
   }
 
+  loadExerciseData() {
+    this.http.get<ExerciseDay[]>('http://localhost:3000/exerciseDays').subscribe(data => {
+      this.exerciseDays = data;
+      this.chunkedDays = this.chunkArray(this.exerciseDays, 4);
+    });
+  }
+  
   get exercises() {
     return this.exerciseDays.length > 0 ? this.exerciseDays[this.selectedDayIndex].exercises : [];
   }
@@ -29,7 +33,7 @@ export class TrainPlanComponent {
   selectDay(index: number) {
     this.selectedDayIndex = index;
   }
-  
+
   startWorkout() {
     this.router.navigate(['/workout', this.selectedDayIndex]);
   }
@@ -45,5 +49,8 @@ export class TrainPlanComponent {
     }
 
     return tempArray;
+  }
+  addExercise() {
+    this.router.navigate(['/add-exercise', this.selectedDayIndex]);
   }
 }
