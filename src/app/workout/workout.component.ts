@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Exercise, ExerciseDay } from '../models/exercices.model';
+import { environment } from '../../environments/environments';
 
 @Component({
   selector: 'app-workout',
@@ -24,7 +25,7 @@ export class WorkoutComponent implements OnInit {
   }
 
   loadExerciseData() {
-    this.http.get<ExerciseDay[]>('http://localhost:3000/exerciseDays').subscribe(data => {
+    this.http.get<ExerciseDay[]>(`${environment.apiUrl}/exerciseDays`).subscribe(data => {
       this.exerciseDays = data;
     });
   }

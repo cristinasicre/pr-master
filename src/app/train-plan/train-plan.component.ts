@@ -3,6 +3,7 @@ import { ExerciseDay } from '../models/exercices.model';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { environment } from '../../environments/environments';
 
 @Component({
   selector: 'app-train-plan',
@@ -24,7 +25,7 @@ export class TrainPlanComponent {
   }
 
   loadExerciseData() {
-    this.http.get<ExerciseDay[]>('http://localhost:3000/exerciseDays').subscribe(data => {
+    this.http.get<ExerciseDay[]>(`${environment.apiUrl}/exerciseDays`).subscribe(data => {
       this.exerciseDays = data;
       this.chunkedDays = this.chunkArray(this.exerciseDays, 4);
     });
@@ -70,7 +71,7 @@ export class TrainPlanComponent {
   }
 
   private saveExerciseOrder() {
-    this.http.put(`http://localhost:3000/exerciseDays/${this.selectedDayIndex}`, this.exerciseDays[this.selectedDayIndex])
+    this.http.put(`${environment.apiUrl}/exerciseDays/${this.selectedDayIndex}`, this.exerciseDays[this.selectedDayIndex])
       .subscribe(() => {
         console.log('Exercise order updated');
       });

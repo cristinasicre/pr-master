@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ExerciseDay, Exercise } from '../models/exercices.model';
+import { environment } from '../../environments/environments';
 
 @Component({
   selector: 'app-add-exercise',
@@ -21,7 +22,7 @@ export class AddExerciseComponent {
   }
 
   loadExerciseData() {
-    this.http.get<ExerciseDay[]>('http://localhost:3000/exerciseDays').subscribe(data => {
+    this.http.get<ExerciseDay[]>(`${environment.apiUrl}/exerciseDays`).subscribe(data => {
       this.exerciseDays = data;
     });
   }
@@ -32,7 +33,7 @@ export class AddExerciseComponent {
   }
 
   saveExerciseData() {
-    this.http.put(`http://localhost:3000/exerciseDays/${this.currentDayIndex}`, this.exerciseDays[this.currentDayIndex])
+    this.http.put(`${environment.apiUrl}/exerciseDays/${this.currentDayIndex}`, this.exerciseDays[this.currentDayIndex])
       .subscribe(() => {
         this.router.navigate(['/train-plan'], { queryParams: { dayIndex: this.currentDayIndex } });
       });

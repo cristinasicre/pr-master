@@ -1,40 +1,47 @@
 <div class="retro-container mt-4">
     <div class="button-group">
-      <button class="retro-play-button" (click)="startWorkout()">
-        <i class="fas fa-play"></i> Play
-      </button>
+        <button class="retro-edit-rotine-button">
+            <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+    </div>
+    <div class="button-group">
+        <button class="retro-play-button" (click)="startWorkout()">
+            <i class="fas fa-play"></i> Play
+        </button>
+
     </div>
     <div class="retro-window">
-      <div class="retro-title-bar">
-        <span *ngIf="exerciseDays.length > 0; else loading">
-          {{ exerciseDays[selectedDayIndex].day }}
-        </span>
-        <ng-template #loading>
-          Loading...
-        </ng-template>
-      </div>
-      <div class="retro-content">
-        <div class="retro-nav-wrapper">
-          <div class="retro-nav" *ngFor="let chunk of chunkedDays; let chunkIndex = index">
-            <button *ngFor="let day of chunk; let i = index"
-              [ngClass]="{'active': selectedDayIndex === i + chunkIndex * 4}"
-              (click)="selectDay(i + chunkIndex * 4)">
-              {{ day.day }}
-            </button>
-          </div>
+        <div class="retro-title-bar">
+            <span *ngIf="exerciseDays.length > 0; else loading">
+                {{ exerciseDays[selectedDayIndex].day }}
+            </span>
+            <ng-template #loading>
+                Loading...
+            </ng-template>
         </div>
-  
-        <ul cdkDropList class="retro-list mt-3" (cdkDropListDropped)="drop($event)">
-          <li *ngFor="let exercise of exercises; let i = index"
-              cdkDrag
-              (click)="onExerciseClick(i)">
-            {{ exercise.name }}
-          </li>
-        </ul>
-        <button class="retro-add-exercise-button" (click)="addExercise()">
-          <i class="fas fa-plus"></i>
-        </button>
-      </div>
+        <div class="retro-content">
+            <div class="retro-nav-wrapper">
+                <div class="retro-nav"
+                    *ngFor="let chunk of chunkedDays; let chunkIndex = index">
+                    <button *ngFor="let day of chunk; let i = index"
+                        [ngClass]="{'active': selectedDayIndex === i + chunkIndex * 4}"
+                        (click)="selectDay(i + chunkIndex * 4)">
+                        {{ day.day }}
+                    </button>
+                </div>
+            </div>
+
+            <ul cdkDropList class="retro-list mt-3"
+                (cdkDropListDropped)="drop($event)">
+                <li *ngFor="let exercise of exercises; let i = index"
+                    cdkDrag
+                    (click)="onExerciseClick(i)">
+                    {{ exercise.name }}
+                </li>
+            </ul>
+            <button class="retro-add-exercise-button" (click)="addExercise()">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
     </div>
-  </div>
-  
+</div>

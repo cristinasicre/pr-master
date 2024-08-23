@@ -5,13 +5,14 @@
       "day": "Day 1",
       "exercises": [
         {
-          "name": "Gemelos de pie",
+          "name": "Femoral tumbada/sentada",
           "sets": [
-            "3x15-20"
+            "2x12-15",
+            "1x8-11"
           ],
-          "description": "gemelitos",
+          "description": "Puntas de pies rectas, pelvis pegada al banco, contrae el glúteo y mantén esa contracción. Pausa 1” en ambos extremos del movimiento. Bajada muy controlada.",
           "RIR": "1-2",
-          "external_link": "www.youtube.com"
+          "external_link": "https://www.youtube.com/watch?v=klBXMbpCbJA"
         },
         {
           "name": "Aducción en máquina",
@@ -23,16 +24,6 @@
           "external_link": "https://www.youtube.com/watch?v=XfDtcCXgr68"
         },
         {
-          "name": "Femoral tumbada/sentada",
-          "sets": [
-            "2x12-15",
-            "1x8-11"
-          ],
-          "description": "Puntas de pies rectas, pelvis pegada al banco, contrae el glúteo y mantén esa contracción. Pausa 1” en ambos extremos del movimiento. Bajada muy controlada.",
-          "RIR": "1-2",
-          "external_link": "https://www.youtube.com/watch?v=klBXMbpCbJA"
-        },
-        {
           "name": "Sentadilla en Multipower",
           "sets": [
             "1x4-6",
@@ -41,6 +32,15 @@
           "description": "Adelanta los pies aproximadamente dos palmos a la vertical de la barra. Baja con el torso lo más vertical posible. Si tus talones se levantan al bajar, coloca los pies un poco más adelantados. Pausa 1” abajo.",
           "RIR": "1",
           "external_link": "https://www.youtube.com/watch?v=zndDbhx6lHk"
+        },
+        {
+          "name": "Gemelos de pie",
+          "sets": [
+            "3x15-20"
+          ],
+          "description": "gemelitos",
+          "RIR": "1-2",
+          "external_link": "www.youtube.com"
         },
         {
           "name": "Hips Thrust en máquina (o Multipower)",
