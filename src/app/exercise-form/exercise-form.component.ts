@@ -1,19 +1,32 @@
-import { Component, EventEmitter, Input, Output, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { Exercise } from '../models/exercices.model';
 
 @Component({
   selector: 'app-exercise-form',
   templateUrl: './exercise-form.component.html',
-  styleUrls: ['./exercise-form.component.css']
 })
-export class ExerciseFormComponent implements OnInit, OnChanges {
-  @Input() exercise: Exercise | null = null;
-  @Input() formTitle: string = 'Add Exercise';
+export class ExerciseFormComponent implements OnInit {
+  @Input() set exercise(value: Exercise | null) {
+    this.isEditMode = !!value;
+    if (value) {
+      this.exerciseForm.patchValue({
+        name: value.name,
+        sets: value.sets.join(', '),
+        description: value.description,
+        RIR: value.RIR,
+        external_link: value.external_link
+      });
+    }
+  }
   @Output() save = new EventEmitter<Exercise>();
   @Output() cancel = new EventEmitter<void>();
+  @Output() delete = new EventEmitter<void>();
 
   exerciseForm: FormGroup;
+  isEditMode: boolean = false;
+  showSaveModal = false;
+  showDeleteModal = false;
 
   constructor(private fb: FormBuilder) {
     this.exerciseForm = this.fb.group({
@@ -25,30 +38,43 @@ export class ExerciseFormComponent implements OnInit, OnChanges {
     });
   }
 
-  ngOnInit(): void {
-    this.updateForm();
-  }
+  ngOnInit() { }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['exercise'] && changes['exercise'].currentValue) {
-      this.updateForm();
-    }
-  }
-
-  updateForm(): void {
-    if (this.exercise) {
-      this.exerciseForm.patchValue(this.exercise);
-    }
-  }
-  
-
-  onSave(): void {
+  onSave() {
     if (this.exerciseForm.valid) {
-      this.save.emit(this.exerciseForm.value);
+      this.showSaveModal = true;
     }
   }
 
-  onCancel(): void {
+  onCancel() {
     this.cancel.emit();
   }
+
+  onDelete() {
+    this.showDeleteModal = true;
+  }
+
+  confirmDelete() {
+    this.showDeleteModal = false;
+    this.delete.emit();
+  }
+
+  cancelDelete() {
+    this.showDeleteModal = false;
+  }
+
+  confirmSave() {
+    this.showSaveModal = false;
+    const formValue = this.exerciseForm.value;
+    const updatedExercise: Exercise = {
+      ...this.exerciseForm.value,
+      sets: formValue.sets.split(',').map((set: string) => set.trim())
+    };
+    this.save.emit(updatedExercise);
+  }
+
+  cancelSave() {
+    this.showSaveModal = false;
+  }
+
 }
