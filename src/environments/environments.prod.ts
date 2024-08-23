@@ -1,4 +1,4 @@
 export const environment = {
-    production: false,
+    production: true,
     apiUrl: 'http://plexy-server.duckdns.org:3306'
 };
