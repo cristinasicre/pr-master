@@ -153,6 +153,15 @@ body {
   border: 2px solid #ff66ff;
   box-shadow: 3px 3px 0px #ff66ff;
   text-align: center;
+  cursor: pointer; /* Hace que el cursor cambie al pasar sobre el elemento */
+  transition: transform 0.2s, box-shadow 0.2s; /* Añade una transición suave para los cambios */
+}
+
+.retro-list li:hover {
+  transform: translateY(-5px); /* Eleva ligeramente el elemento al hacer hover */
+  box-shadow: 5px 5px 0px #6a0dad; /* Cambia el color de la sombra */
+  background-color: #ff66ff; /* Cambia el color de fondo al hacer hover */
+  color: #fff; /* Cambia el color del texto al hacer hover */
 }
 
 .retro-buttons {

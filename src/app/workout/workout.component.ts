@@ -1,4 +1,3 @@
-// workout.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -18,6 +17,7 @@ export class WorkoutComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.currentDayIndex = +params.get('dayIndex')!;
+      this.currentExerciseIndex = +params.get('exerciseIndex')! || 0;
     });
 
     this.loadExerciseData();
@@ -26,7 +26,6 @@ export class WorkoutComponent implements OnInit {
   loadExerciseData() {
     this.http.get<ExerciseDay[]>('http://localhost:3000/exerciseDays').subscribe(data => {
       this.exerciseDays = data;
-      this.currentExerciseIndex = 0;
     });
   }
 

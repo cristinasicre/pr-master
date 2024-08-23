@@ -1,38 +1,38 @@
-<!-- train-plan.component.html -->
 <div class="retro-container mt-4">
     <div class="button-group">
-        <button class="retro-play-button" (click)="startWorkout()">
-            <i class="fas fa-play"></i> Play
-        </button>
+      <button class="retro-play-button" (click)="startWorkout()">
+        <i class="fas fa-play"></i> Play
+      </button>
     </div>
     <div class="retro-window">
-        <div class="retro-title-bar">
-            <span *ngIf="exerciseDays.length > 0; else loading">
-                {{ exerciseDays[selectedDayIndex].day }}
-            </span>
-            <ng-template #loading>
-                Loading...
-            </ng-template>
-        </div>
-        <div class="retro-content">
-            <div class="retro-nav-wrapper">
-                <div class="retro-nav" *ngFor="let chunk of chunkedDays">
-                    <button *ngFor="let day of chunk; let i = index"
-                        [ngClass]="{'active': selectedDayIndex === i}"
-                        (click)="selectDay(i)">
-                        {{ day.day }}
-                    </button>
-                </div>
-            </div>
-
-            <ul class="retro-list mt-3">
-                <li *ngFor="let exercise of exercises">
-                    {{ exercise.name }}
-                </li>
-            </ul>
-            <button class="retro-add-exercise-button" (click)="addExercise()">
-                <i class="fas fa-plus"></i>
+      <div class="retro-title-bar">
+        <span *ngIf="exerciseDays.length > 0; else loading">
+          {{ exerciseDays[selectedDayIndex].day }}
+        </span>
+        <ng-template #loading>
+          Loading...
+        </ng-template>
+      </div>
+      <div class="retro-content">
+        <div class="retro-nav-wrapper">
+          <div class="retro-nav" *ngFor="let chunk of chunkedDays">
+            <button *ngFor="let day of chunk; let i = index"
+                    [ngClass]="{'active': selectedDayIndex === i}"
+                    (click)="selectDay(i)">
+              {{ day.day }}
             </button>
+          </div>
         </div>
+  
+        <ul class="retro-list mt-3">
+          <li *ngFor="let exercise of exercises; let i = index" (click)="startExercise(selectedDayIndex, i)">
+            {{ exercise.name }}
+          </li>
+        </ul>
+        <button class="retro-add-exercise-button" (click)="addExercise()">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
     </div>
-</div>
+  </div>
+  

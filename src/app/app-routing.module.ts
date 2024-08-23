@@ -7,7 +7,8 @@ import { AddExerciseComponent } from './add-exercise/add-exercise.component';
 const routes: Routes = [
   { path: '', redirectTo: '/train-plan', pathMatch: 'full' },
   { path: 'train-plan', component: TrainPlanComponent },
-  { path: 'workout/:dayIndex', component: WorkoutComponent },
+  { path: 'workout/:dayIndex', component: WorkoutComponent }, 
+  { path: 'workout/:dayIndex/:exerciseIndex', component: WorkoutComponent }, 
   { path: 'add-exercise/:dayIndex', component: AddExerciseComponent }
 
 ];
