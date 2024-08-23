@@ -183,6 +183,7 @@ body {
   box-shadow: 5px 5px 0px #6a0dad !important;
   color: #fff !important;
   transform: translateY(-5px);
+  text-align: center;
 }
 
 .cdk-drag-dragging {
@@ -191,6 +192,7 @@ body {
   border: 2px solid #6a0dad;
   color: #fff;
   box-shadow: 5px 5px 0px #6a0dad;
+  text-align: center;
 }
 .retro-buttons {
   display: flex;

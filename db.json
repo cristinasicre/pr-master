@@ -246,25 +246,6 @@
           "external_link": "https://www.youtube.com/shorts/l2QJvVxDw_8"
         },
         {
-          "name": "Elevación lateral apoyando pecho",
-          "sets": [
-            "2x12-15",
-            "1x10-12 drop set"
-          ],
-          "description": "Banco a 65º inclinación aprox, con parciales al fallo en la última drop.",
-          "RIR": "1-2",
-          "external_link": "https://www.youtube.com/watch?v=U5PQLxh-IYE"
-        },
-        {
-          "name": "Elevación lateral en polea cable por detrás",
-          "sets": [
-            "2x12-15 por lado"
-          ],
-          "description": "Controla la bajada, polea a altura de cadera. Coloca tobillera en muñeca. Cada serie con parciales al fallo.",
-          "RIR": "1-2",
-          "external_link": "https://www.youtube.com/watch?v=F3viPZvv2TU"
-        },
-        {
           "name": "Press inclinado con mancuernas",
           "sets": [
             "1x7-10",
@@ -285,6 +266,16 @@
           "external_link": "https://www.youtube.com/watch?v=-isSAVB9LQE"
         },
         {
+          "name": "Elevación lateral apoyando pecho",
+          "sets": [
+            "2x12-15",
+            "1x10-12 drop set"
+          ],
+          "description": "Banco a 65º inclinación aprox, con parciales al fallo en la última drop.",
+          "RIR": "1-2",
+          "external_link": "https://www.youtube.com/watch?v=U5PQLxh-IYE"
+        },
+        {
           "name": "Remo en T o Seal row",
           "sets": [
             "1x5-8",
@@ -293,6 +284,15 @@
           "description": "Pausa 1” en ambos extremos del movimiento, contrae bien tu espalda atrás como si tuvieras un lápiz entre las escápulas. Codos alejados, agarre prono o semi neutro.",
           "RIR": "1-2",
           "external_link": "https://www.youtube.com/watch?v=3SqgCivECsE"
+        },
+        {
+          "name": "Elevación lateral en polea cable por detrás",
+          "sets": [
+            "2x12-15 por lado"
+          ],
+          "description": "Controla la bajada, polea a altura de cadera. Coloca tobillera en muñeca. Cada serie con parciales al fallo.",
+          "RIR": "1-2",
+          "external_link": "https://www.youtube.com/watch?v=F3viPZvv2TU"
         },
         {
           "name": "Remo en máquina bajo o remo Gironda agarre estrecho",
