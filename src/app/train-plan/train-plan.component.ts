@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ExerciseDay } from '../models/exercices.model';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-train-plan',
@@ -13,9 +13,12 @@ export class TrainPlanComponent {
   exerciseDays: ExerciseDay[] = [];
   chunkedDays: ExerciseDay[][] = [];
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.selectedDayIndex = +params['dayIndex'] || 0;  // Selecciona el día basado en los parámetros de la URL o el día 0 por defecto
+    });
     this.loadExerciseData();
   }
 
@@ -32,6 +35,7 @@ export class TrainPlanComponent {
 
   selectDay(index: number) {
     this.selectedDayIndex = index;
+    this.updateUrlWithSelectedDay(index); 
   }
 
   startWorkout() {
@@ -57,5 +61,13 @@ export class TrainPlanComponent {
 
   onExerciseClick(index: number) {
     this.router.navigate(['/workout', this.selectedDayIndex, index]);
+  }
+
+  private updateUrlWithSelectedDay(dayIndex: number) {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { dayIndex },
+      queryParamsHandling: 'merge', 
+    });
   }
 }

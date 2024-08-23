@@ -40,7 +40,7 @@ export class WorkoutComponent implements OnInit {
     if (this.currentExerciseIndex < this.exerciseDays[this.currentDayIndex].exercises.length - 1) {
       this.currentExerciseIndex++;
     } else {
-      this.router.navigate(['/train-plan']);
+      this.router.navigate(['/train-plan'], { queryParams: { dayIndex: this.currentDayIndex } });
     }
   }
 
@@ -59,11 +59,12 @@ export class WorkoutComponent implements OnInit {
   }
 
   finishWorkout() {
-    this.router.navigate(['/train-plan']);
+    this.router.navigate(['/train-plan'], { queryParams: { dayIndex: this.currentDayIndex } });
   }
+  
 
   goBack() {
-    this.router.navigate(['/train-plan']);
+    this.router.navigate(['/train-plan'], { queryParams: { dayIndex: this.currentDayIndex } });
   }
 
   editExercise() {

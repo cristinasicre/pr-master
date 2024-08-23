@@ -1,6 +1,8 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Exercise } from '../models/exercices.model';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-exercise-form',
@@ -19,6 +21,7 @@ export class ExerciseFormComponent implements OnInit {
       });
     }
   }
+  @Input() dayIndex: number = 0; 
   @Output() save = new EventEmitter<Exercise>();
   @Output() cancel = new EventEmitter<void>();
   @Output() delete = new EventEmitter<void>();
@@ -28,7 +31,10 @@ export class ExerciseFormComponent implements OnInit {
   showSaveModal = false;
   showDeleteModal = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,
+    private router: Router,
+    private route: ActivatedRoute,
+    private http: HttpClient) {
     this.exerciseForm = this.fb.group({
       name: [''],
       sets: [''],
@@ -45,7 +51,11 @@ export class ExerciseFormComponent implements OnInit {
       this.showSaveModal = true;
     }
   }
-
+  ngOnChanges() {
+    if (this.exercise) {
+      this.exerciseForm.patchValue(this.exercise);
+    }
+  }
   onCancel() {
     this.cancel.emit();
   }
@@ -57,6 +67,7 @@ export class ExerciseFormComponent implements OnInit {
   confirmDelete() {
     this.showDeleteModal = false;
     this.delete.emit();
+    this.navigateToTrainPlan();
   }
 
   cancelDelete() {
@@ -71,10 +82,14 @@ export class ExerciseFormComponent implements OnInit {
       sets: formValue.sets.split(',').map((set: string) => set.trim())
     };
     this.save.emit(updatedExercise);
+    this.navigateToTrainPlan();
   }
 
   cancelSave() {
     this.showSaveModal = false;
   }
 
+  private navigateToTrainPlan() {
+    this.router.navigate(['/train-plan'], { queryParams: { dayIndex: this.dayIndex } });
+  }
 }

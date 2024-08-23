@@ -6,7 +6,7 @@ import { ExerciseDay, Exercise } from '../models/exercices.model';
 @Component({
   selector: 'app-edit-exercise',
   template: `
-    <app-exercise-form [exercise]="exercise" (save)="saveExercise($event)" (cancel)="cancel()" (delete)="deleteExercise()"></app-exercise-form>
+    <app-exercise-form [exercise]="exercise" [dayIndex]="currentDayIndex" (save)="saveExercise($event)" (cancel)="cancel()" (delete)="deleteExercise()"></app-exercise-form>
   `,
 })
 export class EditExerciseComponent {
@@ -35,6 +35,11 @@ export class EditExerciseComponent {
     this.saveExerciseData();
   }
 
+  deleteExercise() {
+    this.exerciseDays[this.currentDayIndex].exercises.splice(this.currentExerciseIndex, 1);
+    this.saveExerciseDataAfterDeletion();
+  }
+
   saveExerciseData() {
     this.http.put(`http://localhost:3000/exerciseDays/${this.currentDayIndex}`, this.exerciseDays[this.currentDayIndex])
       .subscribe(() => {
@@ -42,13 +47,10 @@ export class EditExerciseComponent {
       });
   }
 
-  deleteExercise() {
-    this.exerciseDays[this.currentDayIndex].exercises.splice(this.currentExerciseIndex, 1);
-
-    // Guardar los cambios y redirigir a la pantalla de train-plan
+  saveExerciseDataAfterDeletion() {
     this.http.put(`http://localhost:3000/exerciseDays/${this.currentDayIndex}`, this.exerciseDays[this.currentDayIndex])
       .subscribe(() => {
-        this.router.navigate(['/train-plan', { dayIndex: this.currentDayIndex }]);
+        this.router.navigate(['/train-plan'], { queryParams: { dayIndex: this.currentDayIndex } });
       });
   }
 

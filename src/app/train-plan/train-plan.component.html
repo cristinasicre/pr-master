@@ -15,14 +15,15 @@
       </div>
       <div class="retro-content">
         <div class="retro-nav-wrapper">
-          <div class="retro-nav" *ngFor="let chunk of chunkedDays">
-            <button *ngFor="let day of chunk; let i = index"
-                    [ngClass]="{'active': selectedDayIndex === i}"
-                    (click)="selectDay(i)">
-              {{ day.day }}
-            </button>
+            <div class="retro-nav" *ngFor="let chunk of chunkedDays; let chunkIndex = index">
+              <button *ngFor="let day of chunk; let i = index"
+                [ngClass]="{'active': selectedDayIndex === i + chunkIndex * 4}"
+                (click)="selectDay(i + chunkIndex * 4)">
+                {{ day.day }}
+              </button>
+            </div>
           </div>
-        </div>
+          
   
         <ul class="retro-list mt-3">
           <li *ngFor="let exercise of exercises; let i = index"

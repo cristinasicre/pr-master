@@ -6,12 +6,12 @@ import { ExerciseDay, Exercise } from '../models/exercices.model';
 @Component({
   selector: 'app-add-exercise',
   template: `
-    <app-exercise-form (save)="saveExercise($event)" (cancel)="cancel()"></app-exercise-form>
+    <app-exercise-form [dayIndex]="currentDayIndex" (save)="saveExercise($event)" (cancel)="cancel()"></app-exercise-form>
   `,
 })
 export class AddExerciseComponent {
-  exerciseDays: ExerciseDay[] = [];
   currentDayIndex: number = 0;
+  exerciseDays: ExerciseDay[] = [];
 
   constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { }
 
@@ -34,11 +34,11 @@ export class AddExerciseComponent {
   saveExerciseData() {
     this.http.put(`http://localhost:3000/exerciseDays/${this.currentDayIndex}`, this.exerciseDays[this.currentDayIndex])
       .subscribe(() => {
-        this.router.navigate(['/train-plan']);
+        this.router.navigate(['/train-plan'], { queryParams: { dayIndex: this.currentDayIndex } });
       });
   }
 
   cancel() {
-    this.router.navigate(['/train-plan']);
+    this.router.navigate(['/train-plan'], { queryParams: { dayIndex: this.currentDayIndex } });
   }
 }
