@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ExerciseDay } from '../models/exercices.model';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-train-plan',
@@ -17,7 +18,7 @@ export class TrainPlanComponent {
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      this.selectedDayIndex = +params['dayIndex'] || 0;  // Selecciona el día basado en los parámetros de la URL o el día 0 por defecto
+      this.selectedDayIndex = +params['dayIndex'] || 0;
     });
     this.loadExerciseData();
   }
@@ -61,6 +62,18 @@ export class TrainPlanComponent {
 
   onExerciseClick(index: number) {
     this.router.navigate(['/workout', this.selectedDayIndex, index]);
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.exercises, event.previousIndex, event.currentIndex);
+    this.saveExerciseOrder();
+  }
+
+  private saveExerciseOrder() {
+    this.http.put(`http://localhost:3000/exerciseDays/${this.selectedDayIndex}`, this.exerciseDays[this.selectedDayIndex])
+      .subscribe(() => {
+        console.log('Exercise order updated');
+      });
   }
 
   private updateUrlWithSelectedDay(dayIndex: number) {

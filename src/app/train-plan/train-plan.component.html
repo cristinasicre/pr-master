@@ -15,18 +15,18 @@
       </div>
       <div class="retro-content">
         <div class="retro-nav-wrapper">
-            <div class="retro-nav" *ngFor="let chunk of chunkedDays; let chunkIndex = index">
-              <button *ngFor="let day of chunk; let i = index"
-                [ngClass]="{'active': selectedDayIndex === i + chunkIndex * 4}"
-                (click)="selectDay(i + chunkIndex * 4)">
-                {{ day.day }}
-              </button>
-            </div>
+          <div class="retro-nav" *ngFor="let chunk of chunkedDays; let chunkIndex = index">
+            <button *ngFor="let day of chunk; let i = index"
+              [ngClass]="{'active': selectedDayIndex === i + chunkIndex * 4}"
+              (click)="selectDay(i + chunkIndex * 4)">
+              {{ day.day }}
+            </button>
           </div>
-          
+        </div>
   
-        <ul class="retro-list mt-3">
+        <ul cdkDropList class="retro-list mt-3" (cdkDropListDropped)="drop($event)">
           <li *ngFor="let exercise of exercises; let i = index"
+              cdkDrag
               (click)="onExerciseClick(i)">
             {{ exercise.name }}
           </li>

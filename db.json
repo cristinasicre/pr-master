@@ -246,16 +246,6 @@
           "external_link": "https://www.youtube.com/shorts/l2QJvVxDw_8"
         },
         {
-          "name": "Jalón agarre neutro (o prono)",
-          "sets": [
-            "2x8-12",
-            "1x12-15+20\"RP+AMRAP"
-          ],
-          "description": "Controla la subida y contrae abajo el dorsal. Hombros abajo, sin elevarlos en el rango final del movimiento. Agarre al ancho de hombros.",
-          "RIR": "1-2",
-          "external_link": "https://www.youtube.com/watch?v=-isSAVB9LQE"
-        },
-        {
           "name": "Elevación lateral apoyando pecho",
           "sets": [
             "2x12-15",
@@ -266,14 +256,13 @@
           "external_link": "https://www.youtube.com/watch?v=U5PQLxh-IYE"
         },
         {
-          "name": "Remo en T o Seal row",
+          "name": "Elevación lateral en polea cable por detrás",
           "sets": [
-            "1x5-8",
-            "1x10-14"
+            "2x12-15 por lado"
           ],
-          "description": "Pausa 1” en ambos extremos del movimiento, contrae bien tu espalda atrás como si tuvieras un lápiz entre las escápulas. Codos alejados, agarre prono o semi neutro.",
+          "description": "Controla la bajada, polea a altura de cadera. Coloca tobillera en muñeca. Cada serie con parciales al fallo.",
           "RIR": "1-2",
-          "external_link": "https://www.youtube.com/watch?v=3SqgCivECsE"
+          "external_link": "https://www.youtube.com/watch?v=F3viPZvv2TU"
         },
         {
           "name": "Press inclinado con mancuernas",
@@ -286,13 +275,24 @@
           "external_link": "https://www.youtube.com/watch?v=BJQwPNjum40"
         },
         {
-          "name": "Elevación lateral en polea cable por detrás",
+          "name": "Jalón agarre neutro (o prono)",
           "sets": [
-            "2x12-15 por lado"
+            "2x8-12",
+            "1x12-15+20\"RP+AMRAP"
           ],
-          "description": "Controla la bajada, polea a altura de cadera. Coloca tobillera en muñeca. Cada serie con parciales al fallo.",
+          "description": "Controla la subida y contrae abajo el dorsal. Hombros abajo, sin elevarlos en el rango final del movimiento. Agarre al ancho de hombros.",
           "RIR": "1-2",
-          "external_link": "https://www.youtube.com/watch?v=F3viPZvv2TU"
+          "external_link": "https://www.youtube.com/watch?v=-isSAVB9LQE"
+        },
+        {
+          "name": "Remo en T o Seal row",
+          "sets": [
+            "1x5-8",
+            "1x10-14"
+          ],
+          "description": "Pausa 1” en ambos extremos del movimiento, contrae bien tu espalda atrás como si tuvieras un lápiz entre las escápulas. Codos alejados, agarre prono o semi neutro.",
+          "RIR": "1-2",
+          "external_link": "https://www.youtube.com/watch?v=3SqgCivECsE"
         },
         {
           "name": "Remo en máquina bajo o remo Gironda agarre estrecho",
