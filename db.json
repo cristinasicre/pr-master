@@ -1,7 +1,7 @@
 {
   "exerciseDays": [
     {
-      "id": "1",
+      "id": "0",
       "day": "Day 1",
       "exercises": [
         {
@@ -9,9 +9,9 @@
           "sets": [
             "3x15-20"
           ],
-          "description": "",
+          "description": "gemelitoss",
           "RIR": "1-2",
-          "external_link": ""
+          "external_link": "www.youtube.com"
         },
         {
           "name": "Aducción en máquina",
@@ -62,18 +62,23 @@
           "external_link": "https://www.youtube.com/watch?v=m1-awEQu3-w"
         },
         {
-          "name": "Peso muerto B-Stance",
-          "sets": [
-            "2x12-15 por lado"
-          ],
-          "description": "Lleva tu cadera atrás con ligera flexión de rodilla. Pausa 1” abajo en cada rep.",
-          "RIR": "1-2",
-          "external_link": "https://www.youtube.com/watch?v=nZmjThz-LDg"
+          "name": "rerer",
+          "sets": "rrr",
+          "description": "rr",
+          "RIR": "rr",
+          "external_link": "rr"
+        },
+        {
+          "name": "44444",
+          "sets": "4444444444",
+          "description": "4444444444444",
+          "RIR": "4444444444",
+          "external_link": "44444444"
         }
       ]
     },
     {
-      "id": "2",
+      "id": "1",
       "day": "Day 2",
       "exercises": [
         {
@@ -154,11 +159,20 @@
           "description": "Pausa 1” en ambos extremos del movimiento, codo siempre atrás respecto a la línea del torso. Polea a altura de la rodilla.",
           "RIR": "1-2",
           "external_link": "https://www.youtube.com/watch?v=NXAYP6Bitas"
+        },
+        {
+          "name": "rrerw",
+          "sets": [
+            "212"
+          ],
+          "description": "3sx",
+          "RIR": "2",
+          "external_link": "323"
         }
       ]
     },
     {
-      "id": "3",
+      "id": "2",
       "day": "Day 3",
       "exercises": [
         {
@@ -241,7 +255,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": "3",
       "day": "Day 4",
       "exercises": [
         {

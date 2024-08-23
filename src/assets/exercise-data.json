@@ -1,7 +1,7 @@
 {
   "exerciseDays": [
     {
-      "id": 1,
+      "id": 0,
       "day": "Day 1",
       "exercises": [
         {
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 1,
       "day": "Day 2",
       "exercises": [
         {
@@ -118,7 +118,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 2,
       "day": "Day 3",
       "exercises": [
         {
@@ -180,7 +180,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 3,
       "day": "Day 4",
       "exercises": [
         {

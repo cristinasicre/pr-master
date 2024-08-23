@@ -65,4 +65,8 @@ export class WorkoutComponent implements OnInit {
   goBack() {
     this.router.navigate(['/train-plan']);
   }
+
+  editExercise() {
+    this.router.navigate(['/edit-exercise', this.currentDayIndex, this.currentExerciseIndex]);
+  }
 }

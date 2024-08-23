@@ -1,0 +1,36 @@
+<div class="retro-container mt-4">
+    <div class="retro-window">
+      <div class="retro-title-bar">
+        <span>{{ formTitle }}</span>
+      </div>
+      <div class="retro-content">
+        <form [formGroup]="exerciseForm" (ngSubmit)="onSave()">
+          <div class="form-group">
+            <label for="exerciseName">Exercise Name</label>
+            <input type="text" id="exerciseName" class="form-control" formControlName="name" placeholder="Enter exercise name">
+          </div>
+          <div class="form-group">
+            <label for="exerciseSets">Sets and Reps</label>
+            <input type="text" id="exerciseSets" class="form-control" formControlName="sets" placeholder="e.g., 1x8-10+20”RP+AMRAP, 2x12">
+          </div>
+          <div class="form-group">
+            <label for="exerciseDescription">Description</label>
+            <textarea id="exerciseDescription" class="form-control" formControlName="description" rows="3" placeholder="Enter exercise description"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exerciseRIR">RIR</label>
+            <input type="text" id="exerciseRIR" class="form-control" formControlName="RIR" placeholder="Enter RIR (e.g., 1-2)">
+          </div>
+          <div class="form-group">
+            <label for="exerciseLink">External Link</label>
+            <input type="text" id="exerciseLink" class="form-control" formControlName="external_link" placeholder="Enter external link">
+          </div>
+          <div class="retro-buttons">
+            <button type="button" class="retro-cancel-button" (click)="onCancel()">Cancel</button>
+            <button type="submit" class="retro-save-button">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

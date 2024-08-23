@@ -1,8 +1,13 @@
-<!-- workout.component.html -->
 <div class="retro-container mt-4">
-  <button class="retro-exit-button" (click)="goBack()">
-    <i class="fas fa-door-open"></i> Exit to Menu
-  </button>
+  <div class="button-group">
+    <button class="retro-exit-button" (click)="goBack()">
+      <i class="fas fa-door-open"></i> Exit to Menu
+    </button>
+    <!-- Nuevo botón de Editar -->
+    <button class="retro-edit-button" (click)="editExercise()">
+      <i class="fas fa-edit"></i>
+    </button>
+  </div>
   <div class="retro-window">
     <div class="retro-title-bar">
       <span *ngIf="currentExercise; else loading">
@@ -14,7 +19,7 @@
         <p>{{ currentExercise.description }}</p>
         <ul class="retro-list">
           <li *ngFor="let rep of currentExercise.sets; let i = index">
-             {{ rep }} reps
+            {{ rep }} reps
           </li>
         </ul>
         <p><strong>RIR:</strong> {{ currentExercise.RIR }}</p>

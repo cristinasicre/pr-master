@@ -158,7 +158,9 @@ body {
 }
 
 .retro-list li:hover {
-  transform: translateY(-5px); /* Eleva ligeramente el elemento al hacer hover */
+  transform: translateY(
+    -5px
+  ); /* Eleva ligeramente el elemento al hacer hover */
   box-shadow: 5px 5px 0px #6a0dad; /* Cambia el color de la sombra */
   background-color: #ff66ff; /* Cambia el color de fondo al hacer hover */
   color: #fff; /* Cambia el color del texto al hacer hover */
@@ -297,5 +299,31 @@ body {
 .form-control:focus {
   outline: none;
   border-color: #ff66ff;
+  box-shadow: 5px 5px 0px #6a0dad;
+}
+.retro-edit-button {
+  background-color: #6a0dad;
+  color: #fff;
+  border: 4px solid #ff66ff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px; /* espacio entre los botones */
+  box-shadow: 5px 5px 0px #ff66ff;
+  font-family: "Press Start 2P", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.retro-edit-button i {
+  margin-right: 0; /* Centrado sin margen a la derecha */
+}
+
+.retro-edit-button:hover {
+  background-color: #ff66ff;
+  color: #6a0dad;
+  border-color: #6a0dad;
   box-shadow: 5px 5px 0px #6a0dad;
 }

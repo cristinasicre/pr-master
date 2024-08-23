@@ -25,7 +25,8 @@
         </div>
   
         <ul class="retro-list mt-3">
-          <li *ngFor="let exercise of exercises; let i = index" (click)="startExercise(selectedDayIndex, i)">
+          <li *ngFor="let exercise of exercises; let i = index"
+              (click)="onExerciseClick(i)">
             {{ exercise.name }}
           </li>
         </ul>

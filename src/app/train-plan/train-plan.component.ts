@@ -13,7 +13,7 @@ export class TrainPlanComponent {
   exerciseDays: ExerciseDay[] = [];
   chunkedDays: ExerciseDay[][] = [];
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
     this.loadExerciseData();
@@ -55,7 +55,7 @@ export class TrainPlanComponent {
     this.router.navigate(['/add-exercise', this.selectedDayIndex]);
   }
 
-  startExercise(dayIndex: number, exerciseIndex: number) {
-    this.router.navigate(['/workout', dayIndex, exerciseIndex]);
+  onExerciseClick(index: number) {
+    this.router.navigate(['/workout', this.selectedDayIndex, index]);
   }
 }

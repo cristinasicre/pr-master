@@ -9,21 +9,26 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TrainPlanComponent } from './train-plan/train-plan.component';
 import { WorkoutComponent } from './workout/workout.component';
 import { AddExerciseComponent } from './add-exercise/add-exercise.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ExerciseFormComponent } from './exercise-form/exercise-form.component';
+import { EditExerciseComponent } from './edit-exercise/edit-exercise.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TrainPlanComponent,
     WorkoutComponent,
-    AddExerciseComponent
+    AddExerciseComponent,
+    ExerciseFormComponent,
+    EditExerciseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
