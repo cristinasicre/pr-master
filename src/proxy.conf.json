@@ -1,6 +1,6 @@
 {
     "/": {
-      "target": "http://plexy-server.duckdns.org:3306/",
+      "target": "http://plexy-server.duckdns.org:25564/",
       "secure": false,
       "changeOrigin": true,
       "pathRewrite": {
