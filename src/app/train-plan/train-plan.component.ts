@@ -25,7 +25,7 @@ export class TrainPlanComponent {
   }
 
   loadRoutine() {
-    this.http.get<Routine[]>(`${environment.apiUrl}/routines`).subscribe(data => {
+    this.http.get<Routine[]>(`${environment.apiUrl}/api/routines`).subscribe(data => {
       this.routine = data[0];
       if (this.routine.exerciseDays) {
         this.exerciseDays = this.routine.exerciseDays;
@@ -73,13 +73,13 @@ export class TrainPlanComponent {
     moveItemInArray(this.exercises, event.previousIndex, event.currentIndex);
     this.saveExerciseOrder();
   }
-  
+
   private saveExerciseOrder() {
     if (this.routine && this.routine.id != null) {
       // Actualizar solo la parte modificada del ejercicio
       const updatedRoutine = { ...this.routine, exerciseDays: [...this.exerciseDays] };
 
-      this.http.put(`${environment.apiUrl}/routines/${this.routine.id}`, updatedRoutine)
+      this.http.put(`${environment.apiUrl}/api/routines/${this.routine.id}`, updatedRoutine)
         .subscribe(() => {
           console.log('Exercise order updated');
         });
