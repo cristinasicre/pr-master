@@ -26,7 +26,7 @@ export class WorkoutComponent implements OnInit {
   }
 
   loadRoutine() {
-    this.http.get<Routine[]>(`${environment.apiUrl}/api/routines`).subscribe(data => {
+    this.http.get<Routine[]>(`${environment.apiUrl}/routines`).subscribe(data => {
       this.routine = data[0]; // Suponiendo que quieres cargar la primera rutina disponible
       if (this.routine?.exerciseDays) {
         this.exerciseDays = this.routine.exerciseDays;

@@ -25,7 +25,7 @@ export class EditExerciseComponent {
   }
 
   loadRoutine() {
-    this.http.get<Routine[]>(`${environment.apiUrl}/api/routines`).subscribe(data => {
+    this.http.get<Routine[]>(`${environment.apiUrl}/routines`).subscribe(data => {
       this.routine = data[0]; // Cargamos la primera rutina
       if (this.routine && this.routine.exerciseDays) {
         this.exercise = this.routine.exerciseDays[this.currentDayIndex].exercises[this.currentExerciseIndex];
@@ -51,7 +51,7 @@ export class EditExerciseComponent {
 
   updateRoutine(callback?: () => void) {
     if (this.routine) {
-      this.http.put(`${environment.apiUrl}/api/routines/${this.routine.id}`, this.routine)
+      this.http.put(`${environment.apiUrl}/routines/${this.routine.id}`, this.routine)
         .subscribe(() => {
           if (callback) {
             callback();
