@@ -1,241 +1,244 @@
 {
-  "routine": {
-    "routineName": "Mesociclo 2",
-    "exerciseDays": [
-      {
-        "id": 0,
-        "day": "Day 1",
-        "exercises": [
-          {
-            "name": "Gemelo de pie",
-            "sets": ["3x15-20"],
-            "description": "",
-            "RIR": "1-2",
-            "external_link": ""
-          },
-          {
-            "name": "Aducción en máquina",
-            "sets": ["2x10-15"],
-            "description": "Pausa 1” en ambos extremos del movimiento, sin tirones.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=XfDtcCXgr68"
-          },
-          {
-            "name": "Femoral tumbada/sentada",
-            "sets": ["2x12-15", "1x8-11"],
-            "description": "Puntas de pies rectas, pelvis pegada al banco, contrae el glúteo y mantén esa contracción. Pausa 1” en ambos extremos del movimiento. Bajada muy controlada.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=klBXMbpCbJA"
-          },
-          {
-            "name": "Sentadilla en Multipower",
-            "sets": ["1x4-6", "1x6-9"],
-            "description": "Adelanta los pies aproximadamente dos palmos a la vertical de la barra. Baja con el torso lo más vertical posible. Si tus talones se levantan al bajar, coloca los pies un poco más adelantados. Pausa 1” abajo.",
-            "RIR": "1",
-            "external_link": "https://www.youtube.com/watch?v=zndDbhx6lHk"
-          },
-          {
-            "name": "Hip Thrust en máquina (o Multipower)",
-            "sets": ["1x7-10", "2x12-15"],
-            "description": "Aguanta un segundo arriba contrayendo el glúteo al máximo.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=7Ww78-YGe4U"
-          },
-          {
-            "name": "Búlgara para glúteo",
-            "sets": ["2x8-12 por lado"],
-            "description": "Torso inclinado hacia delante, movimiento hacia atrás. Mancuerna en mano contraria a pie adelantado. Aleja el banco.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=m1-awEQu3-w"
-          },
-          {
-            "name": "Peso muerto B-Stance",
-            "sets": ["2x12-15 por lado"],
-            "description": "Lleva tu cadera atrás con ligera flexión de rodilla. Pausa 1” abajo en cada rep.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=nZmjThz-LDg"
-          }
-        ]
-      },
-      {
-        "id": 1,
-        "day": "Day 2",
-        "exercises": [
-          {
-            "name": "Curl predicador en máquina o en banco con barra Z",
-            "sets": ["1x8-12", "1x12-14"],
-            "description": "Codos fijos al asiento, axilas pegadas al banco, controla la bajada al máximo y pausa 1” en ambos extremos.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/shorts/Fg9iIMPxK_g"
-          },
-          {
-            "name": "Press militar libre sentada (o con mancuernas)",
-            "sets": ["1x5-7", "2x7-9"],
-            "description": "Baja controladamente. Codo y muñeca alineados al final del movimiento. Una vez que llegues al rango más alto, sube peso.",
-            "RIR": "1",
-            "external_link": "https://www.youtube.com/watch?v=r2f3IR4HNCs"
-          },
-          {
-            "name": "Lateral inclinada hacia delante",
-            "sets": ["2x12-15", "1x12-15+12-15 descendente"],
-            "description": "Céntrate en alejar las mancuernas al subir. Con parciales al fallo.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/shorts/6mdH148dhd0"
-          },
-          {
-            "name": "Remo unilateral con mancuerna",
-            "sets": ["1x8-11 por lado", "1x10-12+10-12 descendente"],
-            "description": "Controla la bajada, lleva tu codo hacia la cadera.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=g40jGe8GBXo"
-          },
-          {
-            "name": "Flexiones cerradas",
-            "sets": ["AMRAP"],
-            "description": "Con rodillas apoyadas, una vez que llegues al rango más alto de reps, las hacemos con pies apoyados.",
-            "RIR": "Al fallo",
-            "external_link": "https://www.youtube.com/watch?v=7fsqdmYopOk"
-          },
-          {
-            "name": "Remo Gironda doble agarre o con barra prono",
-            "sets": ["1x10-12", "1x12-15"],
-            "description": "Agarre prono al ancho clavicular. Codos alejados, centrándonos en contraer la espalda atrás.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=CBoZ_aa2520"
-          },
-          {
-            "name": "Extensión tríceps cruzado",
-            "sets": ["2x10-14", "1x8-10+20\"RP+AMRAP"],
-            "description": "Pausa 1” en ambos extremos del movimiento.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/shorts/TpxGMOLtfWk"
-          },
-          {
-            "name": "Curl bayesian en polea",
-            "sets": ["2x10-14", "1x8-10+20\"RP+AMRAP"],
-            "description": "Pausa 1” en ambos extremos del movimiento, codo siempre atrás respecto a la línea del torso. Polea a altura de la rodilla.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=NXAYP6Bitas"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "day": "Day 3",
-        "exercises": [
-          {
-            "name": "Glute bridge (pre-activación)",
-            "sets": ["2x15-20"],
-            "description": "Aguanta un segundo en cada rep contrayendo el glúteo al final del movimiento.",
-            "RIR": "2",
-            "external_link": "https://www.youtube.com/watch?v=fPhRdZL6T68"
-          },
-          {
-            "name": "Peso muerto rumano con barra o mancuernas",
-            "sets": ["1x5-8", "1x8-11"],
-            "description": "Lleva tu cadera atrás todo lo posible, en el punto que no puedas seguir extendiéndola sube controladamente. Pausa 1” abajo.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=jDg1UVFl-rw"
-          },
-          {
-            "name": "Curl femoral tumbada/sentada",
-            "sets": ["1x8-12", "2x12-15+parciales al fallo"],
-            "description": "Controla la bajada, movimiento sin tirones con pausa de 1” en ambos extremos del movimiento.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=klBXMbpCbJA"
-          },
-          {
-            "name": "Prensa pendular unilateral",
-            "sets": ["2x8-12 por lado"],
-            "description": "Movimiento controlado, máxima flexión de cadera.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/shorts/21z2yjLUELQ"
-          },
-          {
-            "name": "Leg extensión",
-            "sets": ["2x8-12", "1x12-15+12-15 descendente"],
-            "description": "Aguanta un segundo arriba, contrayendo el cuádriceps. Encadena reps, sin perder tensión.",
-            "RIR": "1-2",
-            "external_link": ""
-          },
-          {
-            "name": "Hiperextensión en banco",
-            "sets": ["2x12-15"],
-            "description": "Aguanta un segundo arriba, contrayendo el glúteo en cada rep. Banco debajo de crestas iliacas, céntrate en empujar el asiento con tu cadera como si se tratase de un hip thrust.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=6h7znpnXoiU"
-          },
-          {
-            "name": "Press francés barra Z o en máquina",
-            "sets": ["1x8-11", "2x11-14"],
-            "description": "Pausa 1” en ambos extremos del movimiento. Última serie con parciales al fallo.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=f2mFAFqkgFM"
-          },
-          {
-            "name": "Curl de bíceps martillo",
-            "sets": ["1x10-12", "2x8-10+8-10 descendente"],
-            "description": "Controla la bajada (excéntrica).",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=KyQRPksi3YI"
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "day": "Day 4",
-        "exercises": [
-          {
-            "name": "Posterior en máquina",
-            "sets": ["2x12-15", "1x8-12+20\"RP+AMRAP"],
-            "description": "Empuja con parte trasera de la mano, codo ligera flexión. Agarres a altura de hombros. Protracción escapular.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/shorts/l2QJvVxDw_8"
-          },
-          {
-            "name": "Jalón agarre neutro (o prono)",
-            "sets": ["2x8-12", "1x12-15+20\"RP+AMRAP"],
-            "description": "Controla la subida y contrae abajo el dorsal. Hombros abajo, sin elevarlos en el rango final del movimiento. Agarre al ancho de hombros.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=-isSAVB9LQE"
-          },
-          {
-            "name": "Elevación lateral apoyando pecho",
-            "sets": ["2x12-15", "1x10-12 drop set"],
-            "description": "Banco a 65º inclinación aprox, con parciales al fallo en la última drop.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=U5PQLxh-IYE"
-          },
-          {
-            "name": "Remo en T o Seal row",
-            "sets": ["1x5-8", "1x10-14"],
-            "description": "Pausa 1” en ambos extremos del movimiento, contrae bien tu espalda atrás como si tuvieras un lápiz entre las escápulas. Codos alejados, agarre prono o semi neutro.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=3SqgCivECsE"
-          },
-          {
-            "name": "Press inclinado con mancuernas",
-            "sets": ["1x7-10", "2x11-14"],
-            "description": "Controla la bajada. Cuando bajes procura que tu muñeca y codo queden alineados. Banco a unos 45º aprox. Una vez que llegues al rango más alto de reps en la serie, sube kgs ligeramente.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=BJQwPNjum40"
-          },
-          {
-            "name": "Elevación lateral en polea cable por detrás",
-            "sets": ["2x12-15 por lado"],
-            "description": "Controla la bajada, polea a altura de cadera. Coloca tobillera en muñeca. Cada serie con parciales al fallo.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=F3viPZvv2TU"
-          },
-          {
-            "name": "Remo en máquina bajo o remo Gironda agarre estrecho",
-            "sets": ["2x8-12", "1x12-15"],
-            "description": "Contrae bien tu espalda atrás como si tuvieras un lápiz entre las escápulas. Terminando cada serie con parciales al fallo.",
-            "RIR": "1-2",
-            "external_link": "https://www.youtube.com/watch?v=Kgf1U9mnIdc"
-          }
-        ]
-      }
-    ]
-  }
+  "routines": [
+    {
+      "id": 0,
+      "name": "Mesociclo 2",
+      "exerciseDays": [
+        {
+          "id": 0,
+          "day": "Day 1",
+          "exercises": [
+            {
+              "name": "Gemelo de pie",
+              "sets": ["3x15-20"],
+              "description": "",
+              "RIR": "1-2",
+              "external_link": ""
+            },
+            {
+              "name": "Aducción en máquina",
+              "sets": ["2x10-15"],
+              "description": "Pausa 1” en ambos extremos del movimiento, sin tirones.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=XfDtcCXgr68"
+            },
+            {
+              "name": "Femoral tumbada/sentada",
+              "sets": ["2x12-15", "1x8-11"],
+              "description": "Puntas de pies rectas, pelvis pegada al banco, contrae el glúteo y mantén esa contracción. Pausa 1” en ambos extremos del movimiento. Bajada muy controlada.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=klBXMbpCbJA"
+            },
+            {
+              "name": "Sentadilla en Multipower",
+              "sets": ["1x4-6", "1x6-9"],
+              "description": "Adelanta los pies aproximadamente dos palmos a la vertical de la barra. Baja con el torso lo más vertical posible. Si tus talones se levantan al bajar, coloca los pies un poco más adelantados. Pausa 1” abajo.",
+              "RIR": "1",
+              "external_link": "https://www.youtube.com/watch?v=zndDbhx6lHk"
+            },
+            {
+              "name": "Hip Thrust en máquina (o Multipower)",
+              "sets": ["1x7-10", "2x12-15"],
+              "description": "Aguanta un segundo arriba contrayendo el glúteo al máximo.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=7Ww78-YGe4U"
+            },
+            {
+              "name": "Búlgara para glúteo",
+              "sets": ["2x8-12 por lado"],
+              "description": "Torso inclinado hacia delante, movimiento hacia atrás. Mancuerna en mano contraria a pie adelantado. Aleja el banco.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=m1-awEQu3-w"
+            },
+            {
+              "name": "Peso muerto B-Stance",
+              "sets": ["2x12-15 por lado"],
+              "description": "Lleva tu cadera atrás con ligera flexión de rodilla. Pausa 1” abajo en cada rep.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=nZmjThz-LDg"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "day": "Day 2",
+          "exercises": [
+            {
+              "name": "Curl predicador en máquina o en banco con barra Z",
+              "sets": ["1x8-12", "1x12-14"],
+              "description": "Codos fijos al asiento, axilas pegadas al banco, controla la bajada al máximo y pausa 1” en ambos extremos.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/shorts/Fg9iIMPxK_g"
+            },
+            {
+              "name": "Press militar libre sentada (o con mancuernas)",
+              "sets": ["1x5-7", "2x7-9"],
+              "description": "Baja controladamente. Codo y muñeca alineados al final del movimiento. Una vez que llegues al rango más alto, sube peso.",
+              "RIR": "1",
+              "external_link": "https://www.youtube.com/watch?v=r2f3IR4HNCs"
+            },
+            {
+              "name": "Lateral inclinada hacia delante",
+              "sets": ["2x12-15", "1x12-15+12-15 descendente"],
+              "description": "Céntrate en alejar las mancuernas al subir. Con parciales al fallo.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/shorts/6mdH148dhd0"
+            },
+            {
+              "name": "Remo unilateral con mancuerna",
+              "sets": ["1x8-11 por lado", "1x10-12+10-12 descendente"],
+              "description": "Controla la bajada, lleva tu codo hacia la cadera.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=g40jGe8GBXo"
+            },
+            {
+              "name": "Flexiones cerradas",
+              "sets": ["AMRAP"],
+              "description": "Con rodillas apoyadas, una vez que llegues al rango más alto de reps, las hacemos con pies apoyados.",
+              "RIR": "Al fallo",
+              "external_link": "https://www.youtube.com/watch?v=7fsqdmYopOk"
+            },
+            {
+              "name": "Remo Gironda doble agarre o con barra prono",
+              "sets": ["1x10-12", "1x12-15"],
+              "description": "Agarre prono al ancho clavicular. Codos alejados, centrándonos en contraer la espalda atrás.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=CBoZ_aa2520"
+            },
+            {
+              "name": "Extensión tríceps cruzado",
+              "sets": ["2x10-14", "1x8-10+20\"RP+AMRAP"],
+              "description": "Pausa 1” en ambos extremos del movimiento.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/shorts/TpxGMOLtfWk"
+            },
+            {
+              "name": "Curl bayesian en polea",
+              "sets": ["2x10-14", "1x8-10+20\"RP+AMRAP"],
+              "description": "Pausa 1” en ambos extremos del movimiento, codo siempre atrás respecto a la línea del torso. Polea a altura de la rodilla.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=NXAYP6Bitas"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "day": "Day 3",
+          "exercises": [
+            {
+              "name": "Glute bridge (pre-activación)",
+              "sets": ["2x15-20"],
+              "description": "Aguanta un segundo en cada rep contrayendo el glúteo al final del movimiento.",
+              "RIR": "2",
+              "external_link": "https://www.youtube.com/watch?v=fPhRdZL6T68"
+            },
+            {
+              "name": "Peso muerto rumano con barra o mancuernas",
+              "sets": ["1x5-8", "1x8-11"],
+              "description": "Lleva tu cadera atrás todo lo posible, en el punto que no puedas seguir extendiéndola sube controladamente. Pausa 1” abajo.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=jDg1UVFl-rw"
+            },
+            {
+              "name": "Curl femoral tumbada/sentada",
+              "sets": ["1x8-12", "2x12-15+parciales al fallo"],
+              "description": "Controla la bajada, movimiento sin tirones con pausa de 1” en ambos extremos del movimiento.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=klBXMbpCbJA"
+            },
+            {
+              "name": "Prensa pendular unilateral",
+              "sets": ["2x8-12 por lado"],
+              "description": "Movimiento controlado, máxima flexión de cadera.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/shorts/21z2yjLUELQ"
+            },
+            {
+              "name": "Leg extensión",
+              "sets": ["2x8-12", "1x12-15+12-15 descendente"],
+              "description": "Aguanta un segundo arriba, contrayendo el cuádriceps. Encadena reps, sin perder tensión.",
+              "RIR": "1-2",
+              "external_link": ""
+            },
+            {
+              "name": "Hiperextensión en banco",
+              "sets": ["2x12-15"],
+              "description": "Aguanta un segundo arriba, contrayendo el glúteo en cada rep. Banco debajo de crestas iliacas, céntrate en empujar el asiento con tu cadera como si se tratase de un hip thrust.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=6h7znpnXoiU"
+            },
+            {
+              "name": "Press francés barra Z o en máquina",
+              "sets": ["1x8-11", "2x11-14"],
+              "description": "Pausa 1” en ambos extremos del movimiento. Última serie con parciales al fallo.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=f2mFAFqkgFM"
+            },
+            {
+              "name": "Curl de bíceps martillo",
+              "sets": ["1x10-12", "2x8-10+8-10 descendente"],
+              "description": "Controla la bajada (excéntrica).",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=KyQRPksi3YI"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "day": "Day 4",
+          "exercises": [
+            {
+              "name": "Posterior en máquina",
+              "sets": ["2x12-15", "1x8-12+20\"RP+AMRAP"],
+              "description": "Empuja con parte trasera de la mano, codo ligera flexión. Agarres a altura de hombros. Protracción escapular.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/shorts/l2QJvVxDw_8"
+            },
+            {
+              "name": "Jalón agarre neutro (o prono)",
+              "sets": ["2x8-12", "1x12-15+20\"RP+AMRAP"],
+              "description": "Controla la subida y contrae abajo el dorsal. Hombros abajo, sin elevarlos en el rango final del movimiento. Agarre al ancho de hombros.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=-isSAVB9LQE"
+            },
+            {
+              "name": "Elevación lateral apoyando pecho",
+              "sets": ["2x12-15", "1x10-12 drop set"],
+              "description": "Banco a 65º inclinación aprox, con parciales al fallo en la última drop.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=U5PQLxh-IYE"
+            },
+            {
+              "name": "Remo en T o Seal row",
+              "sets": ["1x5-8", "1x10-14"],
+              "description": "Pausa 1” en ambos extremos del movimiento, contrae bien tu espalda atrás como si tuvieras un lápiz entre las escápulas. Codos alejados, agarre prono o semi neutro.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=3SqgCivECsE"
+            },
+            {
+              "name": "Press inclinado con mancuernas",
+              "sets": ["1x7-10", "2x11-14"],
+              "description": "Controla la bajada. Cuando bajes procura que tu muñeca y codo queden alineados. Banco a unos 45º aprox. Una vez que llegues al rango más alto de reps en la serie, sube kgs ligeramente.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=BJQwPNjum40"
+            },
+            {
+              "name": "Elevación lateral en polea cable por detrás",
+              "sets": ["2x12-15 por lado"],
+              "description": "Controla la bajada, polea a altura de cadera. Coloca tobillera en muñeca. Cada serie con parciales al fallo.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=F3viPZvv2TU"
+            },
+            {
+              "name": "Remo en máquina bajo o remo Gironda agarre estrecho",
+              "sets": ["2x8-12", "1x12-15"],
+              "description": "Contrae bien tu espalda atrás como si tuvieras un lápiz entre las escápulas. Terminando cada serie con parciales al fallo.",
+              "RIR": "1-2",
+              "external_link": "https://www.youtube.com/watch?v=Kgf1U9mnIdc"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

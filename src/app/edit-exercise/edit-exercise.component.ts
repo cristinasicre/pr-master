@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { ExerciseDay, Exercise } from '../models/exercices.model';
+import { ExerciseDay, Exercise, Routine } from '../models/exercices.model';
 import { environment } from '../../environments/environments';
 
 @Component({
@@ -11,7 +11,7 @@ import { environment } from '../../environments/environments';
   `,
 })
 export class EditExerciseComponent {
-  exerciseDays: ExerciseDay[] = [];
+  routine: Routine | null = null;
   currentDayIndex: number = 0;
   currentExerciseIndex: number = 0;
   exercise: Exercise | null = null;
@@ -21,38 +21,45 @@ export class EditExerciseComponent {
   ngOnInit() {
     this.currentDayIndex = +this.route.snapshot.paramMap.get('dayIndex')!;
     this.currentExerciseIndex = +this.route.snapshot.paramMap.get('exerciseIndex')!;
-    this.loadExerciseData();
+    this.loadRoutine();
   }
 
-  loadExerciseData() {
-    this.http.get<ExerciseDay[]>(`${environment.apiUrl}/exerciseDays`).subscribe(data => {
-      this.exerciseDays = data;
-      this.exercise = this.exerciseDays[this.currentDayIndex].exercises[this.currentExerciseIndex];
+  loadRoutine() {
+    this.http.get<Routine[]>(`${environment.apiUrl}/routines`).subscribe(data => {
+      this.routine = data[0]; // Cargamos la primera rutina
+      if (this.routine && this.routine.exerciseDays) {
+        this.exercise = this.routine.exerciseDays[this.currentDayIndex].exercises[this.currentExerciseIndex];
+      }
     });
   }
 
   saveExercise(updatedExercise: Exercise) {
-    this.exerciseDays[this.currentDayIndex].exercises[this.currentExerciseIndex] = updatedExercise;
-    this.saveExerciseData();
+    if (this.routine && this.routine.exerciseDays) {
+      this.routine.exerciseDays[this.currentDayIndex].exercises[this.currentExerciseIndex] = updatedExercise;
+      this.updateRoutine();
+    }
   }
 
   deleteExercise() {
-    this.exerciseDays[this.currentDayIndex].exercises.splice(this.currentExerciseIndex, 1);
-    this.saveExerciseDataAfterDeletion();
-  }
-
-  saveExerciseData() {
-    this.http.put(`${environment.apiUrl}/exerciseDays/${this.currentDayIndex}`, this.exerciseDays[this.currentDayIndex])
-      .subscribe(() => {
-        this.router.navigate(['/workout', this.currentDayIndex, this.currentExerciseIndex]);
-      });
-  }
-
-  saveExerciseDataAfterDeletion() {
-    this.http.put(`${environment.apiUrl}/exerciseDays/${this.currentDayIndex}`, this.exerciseDays[this.currentDayIndex])
-      .subscribe(() => {
+    if (this.routine && this.routine.exerciseDays) {
+      this.routine.exerciseDays[this.currentDayIndex].exercises.splice(this.currentExerciseIndex, 1);
+      this.updateRoutine(() => {
         this.router.navigate(['/train-plan'], { queryParams: { dayIndex: this.currentDayIndex } });
       });
+    }
+  }
+
+  updateRoutine(callback?: () => void) {
+    if (this.routine) {
+      this.http.put(`${environment.apiUrl}/routines/${this.routine.id}`, this.routine)
+        .subscribe(() => {
+          if (callback) {
+            callback();
+          } else {
+            this.router.navigate(['/workout', this.currentDayIndex, this.currentExerciseIndex]);
+          }
+        });
+    }
   }
 
   cancel() {

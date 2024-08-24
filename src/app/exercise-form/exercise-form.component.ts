@@ -1,26 +1,14 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges, ChangeDetectorRef } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Exercise } from '../models/exercices.model';
-import { ActivatedRoute, Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-exercise-form',
   templateUrl: './exercise-form.component.html',
 })
-export class ExerciseFormComponent implements OnInit {
-  @Input() set exercise(value: Exercise | null) {
-    this.isEditMode = !!value;
-    if (value) {
-      this.exerciseForm.patchValue({
-        name: value.name,
-        sets: value.sets.join(', '),
-        description: value.description,
-        RIR: value.RIR,
-        external_link: value.external_link
-      });
-    }
-  }
+export class ExerciseFormComponent implements OnInit, OnChanges {
+  @Input() exercise: Exercise | null = null;
   @Input() dayIndex: number = 0; 
   @Output() save = new EventEmitter<Exercise>();
   @Output() cancel = new EventEmitter<void>();
@@ -31,10 +19,7 @@ export class ExerciseFormComponent implements OnInit {
   showSaveModal = false;
   showDeleteModal = false;
 
-  constructor(private fb: FormBuilder,
-    private router: Router,
-    private route: ActivatedRoute,
-    private http: HttpClient) {
+  constructor(private fb: FormBuilder, private router: Router, private cd: ChangeDetectorRef) {
     this.exerciseForm = this.fb.group({
       name: [''],
       sets: [''],
@@ -44,18 +29,36 @@ export class ExerciseFormComponent implements OnInit {
     });
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.setFormValues();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['exercise'] && changes['exercise'].currentValue) {
+      this.isEditMode = true;
+      this.setFormValues();
+    }
+  }
+
+  private setFormValues() {
+    if (this.exercise) {
+        this.exerciseForm.patchValue({
+            name: this.exercise.name,
+            sets: this.exercise.sets.join(', '), // Presenta como string unido por comas
+            description: this.exercise.description,
+            RIR: this.exercise.RIR,
+            external_link: this.exercise.external_link
+        });
+    }
+}
+
 
   onSave() {
     if (this.exerciseForm.valid) {
       this.showSaveModal = true;
     }
   }
-  ngOnChanges() {
-    if (this.exercise) {
-      this.exerciseForm.patchValue(this.exercise);
-    }
-  }
+
   onCancel() {
     this.cancel.emit();
   }
@@ -78,7 +81,8 @@ export class ExerciseFormComponent implements OnInit {
     this.showSaveModal = false;
     const formValue = this.exerciseForm.value;
     const updatedExercise: Exercise = {
-      ...this.exerciseForm.value,
+      ...this.exercise,
+      ...formValue,
       sets: formValue.sets.split(',').map((set: string) => set.trim())
     };
     this.save.emit(updatedExercise);

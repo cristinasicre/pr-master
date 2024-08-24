@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Exercise, ExerciseDay } from '../models/exercices.model';
+import { Exercise, ExerciseDay, Routine } from '../models/exercices.model';
 import { environment } from '../../environments/environments';
 
 @Component({
@@ -12,6 +12,7 @@ export class WorkoutComponent implements OnInit {
   exerciseDays: ExerciseDay[] = [];
   currentDayIndex: number = 0;
   currentExerciseIndex: number = 0;
+  routine: Routine | undefined;
 
   constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient) {}
 
@@ -21,12 +22,15 @@ export class WorkoutComponent implements OnInit {
       this.currentExerciseIndex = +params.get('exerciseIndex')! || 0;
     });
 
-    this.loadExerciseData();
+    this.loadRoutine();
   }
 
-  loadExerciseData() {
-    this.http.get<ExerciseDay[]>(`${environment.apiUrl}/exerciseDays`).subscribe(data => {
-      this.exerciseDays = data;
+  loadRoutine() {
+    this.http.get<Routine[]>(`${environment.apiUrl}/routines`).subscribe(data => {
+      this.routine = data[0]; // Suponiendo que quieres cargar la primera rutina disponible
+      if (this.routine?.exerciseDays) {
+        this.exerciseDays = this.routine.exerciseDays;
+      }
     });
   }
 
@@ -62,7 +66,6 @@ export class WorkoutComponent implements OnInit {
   finishWorkout() {
     this.router.navigate(['/train-plan'], { queryParams: { dayIndex: this.currentDayIndex } });
   }
-  
 
   goBack() {
     this.router.navigate(['/train-plan'], { queryParams: { dayIndex: this.currentDayIndex } });

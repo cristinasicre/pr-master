@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ExerciseDay } from '../models/exercices.model';
+import { ExerciseDay, Routine } from '../models/exercices.model';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
@@ -14,20 +14,24 @@ export class TrainPlanComponent {
   selectedDayIndex: number = 0;
   exerciseDays: ExerciseDay[] = [];
   chunkedDays: ExerciseDay[][] = [];
-
+  routine: Routine = {};
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.selectedDayIndex = +params['dayIndex'] || 0;
     });
-    this.loadExerciseData();
+    this.loadRoutine();
   }
 
-  loadExerciseData() {
-    this.http.get<ExerciseDay[]>(`${environment.apiUrl}/exerciseDays`).subscribe(data => {
-      this.exerciseDays = data;
-      this.chunkedDays = this.chunkArray(this.exerciseDays, 4);
+  loadRoutine() {
+    this.http.get<Routine[]>(`${environment.apiUrl}/routines`).subscribe(data => {
+      this.routine = data[0];
+      if (this.routine.exerciseDays) {
+        this.exerciseDays = this.routine.exerciseDays;
+        this.chunkedDays = this.chunkArray(this.exerciseDays, 4);
+      }
+
     });
   }
 
@@ -37,7 +41,7 @@ export class TrainPlanComponent {
 
   selectDay(index: number) {
     this.selectedDayIndex = index;
-    this.updateUrlWithSelectedDay(index); 
+    this.updateUrlWithSelectedDay(index);
   }
 
   startWorkout() {
@@ -69,19 +73,26 @@ export class TrainPlanComponent {
     moveItemInArray(this.exercises, event.previousIndex, event.currentIndex);
     this.saveExerciseOrder();
   }
-
+  
   private saveExerciseOrder() {
-    this.http.put(`${environment.apiUrl}/exerciseDays/${this.selectedDayIndex}`, this.exerciseDays[this.selectedDayIndex])
-      .subscribe(() => {
-        console.log('Exercise order updated');
-      });
-  }
+    if (this.routine && this.routine.id != null) {
+      // Actualizar solo la parte modificada del ejercicio
+      const updatedRoutine = { ...this.routine, exerciseDays: [...this.exerciseDays] };
 
+      this.http.put(`${environment.apiUrl}/routines/${this.routine.id}`, updatedRoutine)
+        .subscribe(() => {
+          console.log('Exercise order updated');
+        });
+    } else {
+      console.error('Routine ID is not defined');
+    }
+  }
+  
   private updateUrlWithSelectedDay(dayIndex: number) {
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: { dayIndex },
-      queryParamsHandling: 'merge', 
+      queryParamsHandling: 'merge',
     });
   }
 }

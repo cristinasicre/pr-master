@@ -11,3 +11,9 @@ export interface ExerciseDay {
   day: string;
   exercises: Exercise[];
 }
+
+export interface Routine {
+  id?: number;
+  name?: string;
+  exerciseDays?: ExerciseDay[];
+}
