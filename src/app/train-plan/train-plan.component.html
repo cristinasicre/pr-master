@@ -13,7 +13,7 @@
         
         <div class="retro-title-bar">
             <span *ngIf="exerciseDays.length > 0; else loading">
-                {{ exerciseDays[selectedDayIndex].day }}
+                {{routine.name}}
             </span>
             <ng-template #loading>
                 Loading...
