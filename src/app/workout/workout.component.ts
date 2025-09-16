@@ -74,4 +74,8 @@ export class WorkoutComponent implements OnInit {
   editExercise() {
     this.router.navigate(['/edit-exercise', this.currentDayIndex, this.currentExerciseIndex]);
   }
+
+  logExercise() {
+    this.router.navigate(['/log-exercise', this.currentDayIndex, this.currentExerciseIndex]);
+  }
 }

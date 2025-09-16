@@ -29,7 +29,11 @@ export class AddExerciseComponent {
 
   saveExercise(newExercise: Exercise) {
     if (this.routine && this.routine.exerciseDays) {
-      this.routine.exerciseDays[this.currentDayIndex].exercises.push(newExercise);
+      // Generar un id único para el nuevo ejercicio
+      const exercises = this.routine.exerciseDays[this.currentDayIndex].exercises;
+      const maxId = exercises.length > 0 ? Math.max(...exercises.map(e => e.id ?? 0)) : 0;
+      newExercise.id = maxId + 1;
+      exercises.push(newExercise);
       this.saveRoutine();
     }
   }

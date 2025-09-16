@@ -1,0 +1,64 @@
+<div class="retro-container mt-4">
+    <div class="retro-window">
+        <div class="retro-title-bar">
+            <span>Add Exercise log</span>
+        </div>
+        <div class="retro-content">
+            <form [formGroup]="exerciseLogForm" (ngSubmit)="onSave()">
+                <div class="form-group">
+                    <label for="exerciseName">Exercise Reps</label>
+                    <input type="text" id="exerciseName" class="form-control"
+                        formControlName="reps"
+                        placeholder="Enter exercise reps">
+                </div>
+                <div class="form-group">
+                    <label for="exerciseWeight">Exercise Weight</label>
+                    <input type="text" id="exerciseWeight" class="form-control" type="number"
+                        formControlName="weight"
+                        placeholder="Enter exercise weight">
+                </div>
+                <div class="form-group">
+                    <label for="exerciseNotes">Exercise Notes</label>
+                    <textarea id="exerciseNotes" class="form-control"
+                        formControlName="notes" rows="3"
+                        placeholder="Enter exercise notes"></textarea>
+                </div>
+
+                <div class="retro-buttons">
+                    <button type="button" class="retro-cancel-button"
+                        (click)="onCancel()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button type="submit" class="retro-save-button">
+                        <i class="fas fa-save"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal" *ngIf="showSaveModal">
+    <div class="modal-content">
+        <p>Are you sure you want to save the changes?</p>
+        <div class="retro-buttons">
+            <button type="button" class="retro-cancel-button"
+                (click)="cancelSave()"><i class="fas fa-times"></i></button>
+            <button type="button" class="retro-save-button"
+                (click)="confirmSave()"><i class="fas fa-save"></i></button>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="modal" *ngIf="showDeleteModal">
+    <div class="modal-content">
+        <p>Are you sure you want to delete this exercise?</p>
+        <div class="retro-buttons">
+            <button type="button" class="retro-cancel-button"
+                (click)="cancelDelete()"><i class="fas fa-times"></i></button>
+            <button type="button" class="retro-delete-button"
+                (click)="confirmDelete()"><i class="fas fa-trash"></i></button>
+        </div>
+    </div>
+</div> -->

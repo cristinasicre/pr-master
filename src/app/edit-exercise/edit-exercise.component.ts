@@ -26,7 +26,7 @@ export class EditExerciseComponent {
 
   loadRoutine() {
     this.http.get<Routine[]>(`${environment.apiUrl}/routines`).subscribe(data => {
-      this.routine = data[0]; // Cargamos la primera rutina
+      this.routine = data[0]; // TODO Cargamos la primera rutina
       if (this.routine && this.routine.exerciseDays) {
         this.exercise = this.routine.exerciseDays[this.currentDayIndex].exercises[this.currentExerciseIndex];
       }

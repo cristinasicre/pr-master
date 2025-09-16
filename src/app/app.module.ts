@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ExerciseFormComponent } from './exercise-form/exercise-form.component';
 import { EditExerciseComponent } from './edit-exercise/edit-exercise.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { LogExerciseComponent } from './log-exercise/log-exercise.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     WorkoutComponent,
     AddExerciseComponent,
     ExerciseFormComponent,
-    EditExerciseComponent
+    EditExerciseComponent,
+    LogExerciseComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 export interface Exercise {
+  id: number;
   name: string;
   sets: string[];
   description: string;
@@ -13,7 +14,18 @@ export interface ExerciseDay {
 }
 
 export interface Routine {
-  id?: number;
+  id: number;
   name?: string;
   exerciseDays?: ExerciseDay[];
+}
+
+export interface ExerciseLog {
+  id: number;
+  date: string;
+  exerciseId: number;
+  routineId: number;
+  dayId: number;
+  reps?: number[];
+  weight?: number[];
+  notes?: string;
 }

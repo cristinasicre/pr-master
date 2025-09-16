@@ -4,6 +4,7 @@ import { TrainPlanComponent } from './train-plan/train-plan.component';
 import { WorkoutComponent } from './workout/workout.component';
 import { AddExerciseComponent } from './add-exercise/add-exercise.component';
 import { EditExerciseComponent } from './edit-exercise/edit-exercise.component';
+import { LogExerciseComponent } from './log-exercise/log-exercise.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/train-plan', pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'workout/:dayIndex/:exerciseIndex', component: WorkoutComponent },
   { path: 'add-exercise/:dayIndex', component: AddExerciseComponent },
   { path: 'edit-exercise/:dayIndex/:exerciseIndex', component: EditExerciseComponent },
+  { path: 'log-exercise/:dayIndex/:exerciseIndex', component: LogExerciseComponent },
 
 ];
 

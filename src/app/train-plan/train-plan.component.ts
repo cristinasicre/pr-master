@@ -14,7 +14,7 @@ export class TrainPlanComponent {
   selectedDayIndex: number = 0;
   exerciseDays: ExerciseDay[] = [];
   chunkedDays: ExerciseDay[][] = [];
-  routine: Routine = {};
+  routine: Routine = { id: 0 };
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
